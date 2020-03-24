@@ -19,6 +19,7 @@ public class ProducerClient {
 
         Properties properties = (Properties) context.getBean("commonProperties");
         String topic = properties.getProperty("Topic");
+        System.out.println(topic);
 
         //循环发送消息
         for (int i = 0; i < 100; i++) {
