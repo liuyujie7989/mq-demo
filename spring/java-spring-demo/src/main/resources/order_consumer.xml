@@ -9,10 +9,10 @@
           destroy-method="shutdown">
         <property name="properties"> <!--消费者配置信息-->
             <props>
-                <prop key="GROUP_ID">${GROUP_ID}</prop> <!--请替换为自己的账户信息-->
-                <prop key="AccessKey">${AccessKey}</prop>
-                <prop key="SecretKey">${SecretKey}</prop>
-                <prop key="NAMESRV_ADDR">${NAMESRV_ADDR}</prop>
+                <prop key="GROUP_ID">CID_XINDIAN_ZT_MATTER</prop> <!--请替换为自己的账户信息-->
+                <prop key="AccessKey">z760kkGR0MTXsJ76</prop>
+                <prop key="SecretKey">YyVNR6wp0YGOd36RwUabeqtUoOOKK2</prop>
+                <prop key="NAMESRV_ADDR">10.16.11.37:9876</prop>
                 <!--将消费者线程数固定为50个
                  <prop key="ConsumeThreadNums">50</prop>
                 -->
@@ -23,7 +23,7 @@
                 <entry value-ref="msgListener">
                     <key>
                         <bean class="com.aliyun.openservices.ons.api.bean.Subscription">
-                            <property name="topic" value="${Topic}"/>
+                            <property name="topic" value="DEVZT_ZT_AUTHORITY_DATASEND_TOPIC"/>
                             <property name="expression" value="*"/>
                             <!--expression即Tag，可以设置成具体的Tag，如 taga||tagb||tagc，也可设置成*。 *仅代表订阅所有Tag，不支持通配-->
                         </bean>

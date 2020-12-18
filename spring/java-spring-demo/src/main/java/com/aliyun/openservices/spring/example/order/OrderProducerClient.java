@@ -16,17 +16,15 @@ public class OrderProducerClient {
         ApplicationContext context = new ClassPathXmlApplicationContext("order_producer.xml");
         OrderProducer orderProducer = (OrderProducer) context.getBean("producer");
 
-        Properties properties = (Properties) context.getBean("commonProperties");
-        String topic = properties.getProperty("Topic");
         String shardingKey = "OrderedKey";
 
         //循环发送消息
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 10; i++) {
             Message msg = new Message( //
                 // Message所属的Topic
-                topic,
+                "DEVZT_ZT_AUTHORITY_DATASEND_TOPIC",
                 // Message Tag 可理解为Gmail中的标签，对消息进行再归类，方便Consumer指定过滤条件在MQ服务器过滤
-                "TagA",
+                "modify_organisationId_1",
                 // Message Body 可以是任何二进制形式的数据， MQ不做任何干预
                 // 需要Producer与Consumer协商好一致的序列化和反序列化方式
                 "Hello MQ".getBytes());

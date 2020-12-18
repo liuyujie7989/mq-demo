@@ -17,7 +17,7 @@ public class ConsumerClient_test {
     public static void main(String[] args) {
         Properties properties = new Properties();
 // 您在控制台创建的 Group ID
-        properties.put(PropertyKeyConst.GROUP_ID, "CID_ACCEPT_ORG_USER");
+        properties.put(PropertyKeyConst.GROUP_ID, "CID_XINDIAN_ZT_MATTER");
 // AccessKey 阿里云身份验证，在阿里云服务器管理控制台创建
         properties.put(PropertyKeyConst.AccessKey, "z760kkGR0MTXsJ76");
 // SecretKey 阿里云身份验证，在阿里云服务器管理控制台创建
@@ -32,7 +32,6 @@ public class ConsumerClient_test {
 
 // 在订阅消息前，必须调用 start 方法来启动 Consumer，只需调用一次即可。
         OrderConsumer consumer = ONSFactory.createOrderedConsumer(properties);
-
         consumer.subscribe(
 // Message 所属的 Topic
                 "DEVZT_ZT_AUTHORITY_DATASEND_TOPIC",

@@ -36,7 +36,7 @@ public class ProducerClient_test {
 // Message Tag, 可理解为 Gmail 中的标签，对消息进行再归类，方便 Consumer 指定过滤条件在消息队列 RocketMQ 的服务器过滤
                     "modify_organisationId_1",
 // Message Body 可以是任何二进制形式的数据， 消息队列 RocketMQ 不做任何干预，需要 Producer 与 Consumer 协商好一致的序列化和反序列化方式
-                    "{\"body\":\"eyJBcHBfSUQiOiI2MTAxMDAiLCJPUkdfSUQiOiI2MTAxMDAiLCJEQVRBIjp7ImJkY2R5aCI6IjYxMDExMzAxMTAwMUdCMDAwNzZGMDAwMTA2NDgifX0=\",\"host\":\"http://10.6.160.10/bdc _pub_api/query/xa/regdetail\",\"method\":\"JSON\",\"returnUrl\":\"http://10.16.33.47:800/OSN/api/json/HouseCenter/register/qryLandBureauCallBack/v1\"}".getBytes()
+                    "我是消息体111".getBytes()
             );
 // 设置代表消息的业务关键属性，请尽可能全局唯一。
 // 以方便您在无法正常收到消息情况下，可通过控制台查询消息并补发。

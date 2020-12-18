@@ -34,7 +34,7 @@ public class SimpleMQProducer {
 
     public static void main(String[] args) {
         Properties producerProperties = new Properties();
-        producerProperties.setProperty(PropertyKeyConst.GROUP_ID, MqConfig.Consumer_Id);
+        producerProperties.setProperty(PropertyKeyConst.GROUP_ID, MqConfig.Producer_Id);
         producerProperties.setProperty(PropertyKeyConst.AccessKey, MqConfig.ACCESS_KEY);
         producerProperties.setProperty(PropertyKeyConst.SecretKey, MqConfig.SECRET_KEY);
         producerProperties.setProperty(PropertyKeyConst.NAMESRV_ADDR, MqConfig.NAMESRV_ADDR);
@@ -43,7 +43,7 @@ public class SimpleMQProducer {
         System.out.println("Producer Started");
 
         for (int i = 0; i < 10; i++) {
-            Message message = new Message(MqConfig.TOPIC, MqConfig.TAG, "mq send transaction message test".getBytes());
+            Message message = new Message(MqConfig.TOPIC, MqConfig.TAG, "机构id消费体".getBytes());
             try {
                 SendResult sendResult = producer.send(message);
                 assert sendResult != null;

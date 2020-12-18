@@ -8,7 +8,7 @@
           destroy-method="shutdown">
         <property name="properties"> <!--生产者配置信息-->
             <props>
-                <prop key="GROUP_ID">AliyunMQ</prop> <!--请替换为自己的账户信息-->
+                <prop key="GROUP_ID">PID_ZDEVZT_ZT_AUTHORITY_DATASEND</prop> <!--请替换为自己的账户信息-->
                 <prop key="AccessKey">z760kkGR0MTXsJ76</prop>
                 <prop key="SecretKey">YyVNR6wp0YGOd36RwUabeqtUoOOKK2</prop>
                 <prop key="NAMESRV_ADDR">10.16.11.37:9876</prop>
